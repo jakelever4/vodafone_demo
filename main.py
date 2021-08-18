@@ -124,13 +124,13 @@ def predict_cat(X, target_var, target_name):
     xgb1 = xgb.XGBClassifier()
     parameters = {'nthread': [4], #when use hyperthread, xgboost may become slower
                   'objective': ['binary:logistic'], #['reg:linear'],
-                  # 'learning_rate': [0.0001, 0.001, 0.01, 0.1, 0.2, 0.3], #so called `eta` value
-                  # 'max_depth': [7, 8, 9, 10],
+                  'learning_rate': [0.0001, 0.001, 0.01, 0.1, 0.2, 0.3], #so called `eta` value
+                  'max_depth': [7, 8, 9, 10],
                   'min_child_weight': [4],
                   'verbosity': [0],
                   'subsample': [0.7],
-                  # 'colsample_bytree': [0.4, 0.6],
-                  # 'n_estimators': [100, 200, 300, 400, 500]
+                  'colsample_bytree': [0.4, 0.6],
+                  'n_estimators': [100, 200, 300, 400, 500]
                   }
 
     xgb_grid = GridSearchCV(xgb1,
@@ -176,13 +176,13 @@ def predict(X, target_var, target_name):
     xgb1 = xgb.XGBRegressor()
     parameters = {'nthread': [4], #when use hyperthread, xgboost may become slower
                   'objective': ['reg:linear'], #['binary:logistic'],
-                  # 'learning_rate': [0.0001, 0.001, 0.01, 0.1, 0.2, 0.3], #so called `eta` value
-                  # 'max_depth': [7, 8, 9, 10],
+                  'learning_rate': [0.0001, 0.001, 0.01, 0.1, 0.2, 0.3], #so called `eta` value
+                  'max_depth': [7, 8, 9, 10],
                   'min_child_weight': [4],
                   'verbosity': [0],
                   'subsample': [0.7],
-                  # 'colsample_bytree': [0.4, 0.6],
-                  # 'n_estimators': [100, 200, 300, 400, 500]
+                  'colsample_bytree': [0.4, 0.6],
+                  'n_estimators': [100, 200, 300, 400, 500]
                   }
 
     xgb_grid = GridSearchCV(xgb1,
