@@ -7,6 +7,10 @@ Upon running the script, we load in the data, convert/preprocess it, and then ru
 2. Predict physical variables from social sentiment values. The script uses similar ML methods to attempt to predict physcial aspects of wildfire activity based only on social sentiment values
 3. Plot/save wildfire sentimental arcs. For each of the social sentiment variables, create a sentimental arc for the burn period of the wildfire & plot/save.
 
+Results from the predictions are printed to the console, and the graphical results are stored in the graphs folder. There are three folders:
+- feature importances : this folder shows a bar chart for the feature importances from each of the models. The model target is the graph filename.
+- trees : example trees from each of the models. The model target is the graph filename.
+- Sentiment vectors : each wildfire event has its own sentimental arcs which are saved here. Filename corresponds to fire_ID from fires_df.csv
 
 python package requirements
 - pandas
